@@ -1,0 +1,13 @@
+#!name=Meitu XiuXiu SVIP (All-in-One)
+#!desc=Mở khóa trọn gói SVIP / VIP Meitu XiuXiu (美图秀秀) cho Shadowrocket - Hỗ trợ cả bản cũ và mới nhất (V2 Group, Cutout, Posters)
+#!author=tduc (Remake based on chxm1023)
+#!homepage=https://github.com/tduck1412/Locket_remake
+#!category=Unlock
+#!system=iOS
+
+[Url Rewrite]
+# Mở khóa Meitu SVIP / VIP (Hỗ trợ api-sub, posters, xiuxiu)
+Meitu = type=http-response, pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home|account), script-path=https://raw.githubusercontent.com/tduck1412/Locket_remake/main/MeiTuXiuXiu.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND%, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, api-sub.xiuxiu.meitu.com
